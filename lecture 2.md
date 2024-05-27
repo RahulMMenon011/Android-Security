@@ -1,4 +1,4 @@
-![image](https://github.com/RahulMMenon011/Android-Security/assets/140642506/3d2c6110-ef27-4166-9a96-a704f6786355)### ADB
+### ADB
 
 The Android Debug Bridge is a programming tool used for the debugging of Android-based devices. The daemon on the Android device connects with the server on the host PC over USB or TCP, which connects to the client that is used by the end-user over TCP.
 
