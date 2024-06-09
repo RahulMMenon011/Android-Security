@@ -28,7 +28,9 @@ The purpose of CDF is to provide more efficient testing tool to developers and s
 
 ## INSTALLATION
 
-![image](https://github.com/ananthan05/Android-Security/assets/140697378/6e389c52-b90e-46ae-8e64-4db65145801d)
+### Requirments
+
+![337974897-6e389c52-b90e-46ae-8e64-4db65145801d](https://github.com/RahulMMenon011/Android-Security/assets/140642506/39f22fa4-8665-4c88-b03e-88be2651fe86)
 
 ```
 git clone https://github.com/kudelskisecurity/cdf.git
