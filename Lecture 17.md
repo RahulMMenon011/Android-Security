@@ -10,7 +10,6 @@ The tools used for fuzzing are
 
 Fuzzing involves testing the behavior and vulnerabilities of functions by manipulating inputs, such as strings or images.
 
-[Fuzzing](https://github.com/google/fuzzing) Refer this for more information.
 
 These are all common fuzzing tools, but we will be discussing the CDF (crypto differential fuzzing) tool.
 
@@ -26,9 +25,6 @@ Unlike general-purpose fuzzers and testing software, CDF is:
 - **Portable**: CDF will run on any Unix or Windows platform, since it is written in Go without any platform-specific dependencies.
 
 The purpose of CDF is to provide more efficient testing tool to developers and security researchers, being more effective than test vectors and cheaper than manual audit of formal verification.
-
-[CDF](https://github.com/kudelskisecurity/cdf)Refer here for more information.
-
 
 ## INSTALLATION
 
@@ -48,32 +44,32 @@ git clone https://github.com/kudelskisecurity/cdf.git
 ```
  make examples-all
 ```
- will build all the examples.
- 
- while 
+ It will build all the examples.
+  
  ```
 make examples-go
 ```
- will only build the Go examples.
+This will only build the Go examples.
 
 ```
 make test
 ```
-will run unit tests (of CDF).
+This will run unit tests (of CDF).
 
-
-you may want to view usage info by running 
+you can view usage info by running 
 
 ```
 cdf -h
 ```
 
 
-You may then try an example such as the rsaenc interface against the RSA OAEP Go and CryptoPP examples. Viewing CryptoPP as our reference, you can test the Go implementation by doing:
+You can then try an example such as the rsaenc interface against the RSA OAEP Go and CryptoPP examples. 
+
+Viewing CryptoPP as our reference, you can test the Go implementation by doing:
 
 ```
 cdf rsaenc /examples/oaep_rsa2048_go /examples/oaep_rsa2048_cryptopp
 ```
 This command will perform various tests specific to the rsaenc interface.
 
->In this example, CDF should complain about the maximum public exponent size the Go implementation support: if we check its code we can see the public exponent is being stored as a normal integer, whereas in CryptoPP (and most other implementations), it is stored as a big integer. This is however by design and will likely not be changed.
+In this example, CDF should complain about the maximum public exponent size the Go implementation support: if we check its code we can see the public exponent is being stored as a normal integer, whereas in CryptoPP (and most other implementations), it is stored as a big integer. This is however by design and will likely not be changed.
